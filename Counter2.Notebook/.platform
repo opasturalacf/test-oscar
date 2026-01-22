@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Counter2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6fc3c3e1-9486-b5d2-4c41-4a301177bcd9"
+  }
+}
