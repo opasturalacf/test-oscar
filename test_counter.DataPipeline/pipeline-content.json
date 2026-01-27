@@ -85,68 +85,6 @@
             ]
           }
         ]
-      },
-      {
-        "type": "IfCondition",
-        "typeProperties": {
-          "expression": {
-            "value": "@greater(variables('var2000'), variables('nb'))\n",
-            "type": "Expression"
-          },
-          "ifTrueActivities": [
-            {
-              "type": "Office365Email",
-              "typeProperties": {
-                "body": "<p>Yes it works</p>",
-                "to": "opastural@actioncontrelafaim.org",
-                "subject": "test"
-              },
-              "externalReferences": {
-                "connection": "203b27fc-7f16-4ec6-8e97-5acc2a17213d"
-              },
-              "policy": {
-                "timeout": "0.12:00:00",
-                "retry": 0,
-                "retryIntervalInSeconds": 30,
-                "secureInput": false,
-                "secureOutput": false
-              },
-              "name": "mail success",
-              "dependsOn": []
-            }
-          ],
-          "ifFalseActivities": [
-            {
-              "type": "Office365Email",
-              "typeProperties": {
-                "body": "<p>FAIL</p>",
-                "to": "opastural@actioncontrelafaim.org",
-                "subject": "test"
-              },
-              "externalReferences": {
-                "connection": "203b27fc-7f16-4ec6-8e97-5acc2a17213d"
-              },
-              "policy": {
-                "timeout": "0.12:00:00",
-                "retry": 0,
-                "retryIntervalInSeconds": 30,
-                "secureInput": false,
-                "secureOutput": false
-              },
-              "name": "mail failure",
-              "dependsOn": []
-            }
-          ]
-        },
-        "name": "testcond",
-        "dependsOn": [
-          {
-            "activity": "var2000",
-            "dependencyConditions": [
-              "Succeeded"
-            ]
-          }
-        ]
       }
     ],
     "variables": {
